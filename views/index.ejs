@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>ToDo List Alpha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Ranchers&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="firstColor"></div>
+        <div class="secondColor"></div>
+        <div class="thirdColor"></div>
+        <div class="fourthColor"></div>
+        <div class="middleArea">
+            <div class="mainTitle">Grocery List</div>
+            <div class="toDoPad">
+                <div class="box box3">
+    <% if (locals.newToDo) { %>
+        
+        <form action="/home" method="POST">
+            <div class="formData">
+            <input type="text" name="toDo" placeholder="Enter your item here">
+            <button id="addButton" type="submit" value=""></button>
+            </div>
+        </form>
+        
+   
+
+        <ul style="list-style: none">
+            <% for (var i = 0; i < newToDo.length; i++) { %>
+                <li id="listItem"><input type="checkbox">  
+                    <label for="listItem">  <%= newToDo[i] %> </label>
+                </li>
+            <% } %>
+        </ul>
+
+        <form id="clearAll" action="/home" method="POST">
+            <div class="clearButtonContainer"> 
+            <button class="button-74" type="submit" name="clearList" role="button" value="Clear All">Clear All</button>
+            </div>
+          </form>
+
+    <% } else { %> 
+        <form action="/home" method="POST">
+            <input type="text" name="toDo" placeholder="Enter your item here">
+            <input type="submit" value="OK">
+        </form>
+        <h2>No to-do's have been entered yet </h2>
+    <% } %> 
+                </div>
+            </div>
+         <div class="theDate">
+            <% const date = new Date(); %>
+            <% let day = date.getDate(); %>
+            <% let weekday = date.getDay(); %>
+            <% let month = date.getMonth(); %>
+            <% let year = date.getFullYear(); %>
+            <% const monthNames =  ["January",  "February", "March", "April", "May", "June", "July", "August", "September", "October","November","December"]; %>
+            <% const dayNames = ["Sunday", "Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; %>
+            <%console.log(dayNames); %>
+            
+            <p>
+                <%= dayNames[weekday] %>,
+            <%= monthNames[month] %> 
+            <%= day %> 
+            <%= year %>
+            
+            </p>
+        </div>
+    
+
+        </div>
+        <div class="fourthColor"></div>
+        <div class="thirdColor"></div>    
+        <div class="secondColor"></div>
+        <div class="firstColor"></div>
+       
+        
+    </div>
+    <%- include("partials/footer.ejs") %>
+

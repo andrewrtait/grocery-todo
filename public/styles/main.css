@@ -1,0 +1,220 @@
+input:checked + label {
+    text-decoration: line-through;
+}
+
+body {
+    background-color: rgba(2, 235, 183, 1);
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.firstColor {
+    background-color: rgba(232, 183, 5, 1);
+    width: 144px;
+    min-height: 100vh;
+
+}
+
+.secondColor {
+    background-color: rgba(242, 87, 5, 1);
+    width: 72px;
+    height: 100vh;
+}
+
+.thirdColor {
+    background-color: rgba(220, 15, 202, 1);
+    width: 36px;
+    height: 100vh;
+}
+
+.fourthColor {
+    background-color: rgba(5, 28, 242, 1);
+    width: 18px;
+    height: 100vh;
+}
+
+.middleArea {
+
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    
+ 
+}
+
+.mainTitle {
+    color: rgba(220, 15, 202, 1);
+    font-size: 50px;
+    font-family: Ranchers, sans-serif;
+    display: block;
+    text-align: center;
+}
+.toDoPad_original {
+    padding: 2rem;
+    font-family: 'Just Another Hand', cursive;
+box-sizing: border-box;
+background-color: white;
+margin: 75px;
+padding: 30px;
+border-width: 20px;
+border-style: solid;
+border-color: black;
+}
+
+
+.formData {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Just Another Hand', cursive;
+}
+
+.clearButtonContainer {
+    text-align: center;
+}
+
+#clearButton {
+    font-size: 1rem;
+    height: 100px;
+    width: 100px;
+    color: black;
+
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    letter-spacing: .1rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-color: rgba(242, 87, 5, 1);
+    border-radius: 4px;
+  }
+
+input[type=text]:focus {
+    background-color: lightblue;
+  }
+  
+input::placeholder {
+    font-weight: bold;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 1.5rem;
+    opacity: 0.75;
+    color: grey;
+    
+  }
+
+
+
+
+#addButton
+ {
+
+    background-color:rgba(232, 183, 5, 1);
+    background-image: url("/images/plus-circle.svg");
+    background-size: 35px 30px;
+    background-repeat: no-repeat;
+    border: none;
+    width: 30px;
+    height:30px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+input[type=submit] {
+    width: 35px;
+    height: 35px;
+}
+#addButton:hover {
+    background-color:  rgba(220, 15, 202, 1);
+  }
+
+
+.box {
+    font-family: 'Just Another Hand', cursive;
+    margin:25px;
+    width:auto;
+    background:#fff;
+    border: solid black;
+    border-color: black;
+    float:left; 
+      
+}
+
+.box3 {
+    border-width: 5px 3px 3px 5px;
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(2deg);
+}
+
+.oddboxinner {
+    margin:15px;
+    transform: rotate(-2deg);
+}
+
+
+
+.button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  background-image: url("/images/trash-2.svg");
+  background-position: 10px;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  padding-left: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+.theDate {
+    font-family: Ranchers, sans-serif;
+    color: rgba(220, 15, 202, 1)
+}
+
+footer {
+    margin-left:30px;
+    position: absolute;
+    bottom: 0;
+  }
+
